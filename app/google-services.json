@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "519801944837",
+    "project_id": "techuni-c664c",
+    "storage_bucket": "techuni-c664c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:519801944837:android:375fe80ac7d2914ee9d56c",
+        "android_client_info": {
+          "package_name": "com.example.techuni"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkQZqTRKom2h4kyL0s6ZzYMUD4YNwvd04"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
