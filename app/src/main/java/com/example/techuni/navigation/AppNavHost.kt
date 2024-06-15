@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import com.apk.george.ui.theme.screens.HOME.HomeScreen
 import com.apk.george.ui.theme.screens.login.LoginScreen
 import com.apk.george.ui.theme.screens.registration.RegistrationScreen
+import com.example.techuni.navigation.navigation.NavigationItem
 
 
 @Composable
@@ -22,6 +23,9 @@ fun AppNavHost(modifier: Modifier = Modifier,
 //        composable(ROUTE_GALLERY){ GalleryScreen(navController)}
 //        composable(ROUTE_ABOUTUS){ AboutUsScreen(navController) }
         composable(ROUTE_REGISTER){ RegistrationScreen(navController) }
+        composable(NavigationItem.Home.route){ HomeScreen(navController) }
+//        composable(NavigationItem.Action.route){ TopicList(topic = sampleTopics, navController) }
+
         composable(ROUTE_LOGIN){ LoginScreen(navController) }
 //        composable(ROUTE_REASONS){ ReasonsScreen(navController) }
         composable(ROUTE_HOME){ HomeScreen(navController)}
