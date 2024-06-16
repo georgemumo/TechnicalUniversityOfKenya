@@ -9,6 +9,7 @@ import androidx.navigation.NavController
 import com.apk.george.models.User
 import com.example.techuni.navigation.ROUTE_HOME
 import com.example.techuni.navigation.ROUTE_LOGIN
+import com.example.techuni.navigation.ROUTE_REGISTER
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.FirebaseDatabase
 
@@ -39,6 +40,7 @@ class AuthViewModel(private val navController: NavController, private val contex
                 loading.value = false
                 if (task.isSuccessful) {
                     saveUserData(email, password,confirmPassword)
+                    navController.navigate(ROUTE_HOME)
                 } else {
                     handleAuthError(task.exception?.message ?: "Unknown error")
                 }
@@ -87,7 +89,7 @@ class AuthViewModel(private val navController: NavController, private val contex
 
     private fun handleAuthError(errorMessage: String) {
         showToast(errorMessage)
-        navController.navigate(ROUTE_LOGIN)
+        navController.navigate(ROUTE_REGISTER)
     }
     private fun isValidPassword(password: String): Boolean {
         val hasLetters = password.any { it.isLetter() }
