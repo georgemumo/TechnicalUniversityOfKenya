@@ -68,7 +68,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun TopBar(scope:CoroutineScope, scaffoldState: ScaffoldState){
     TopAppBar(
-        title = { Text(text = stringResource(R.string.app_name), fontSize = 18.sp)},
+        title = { Text(text = "Technical University of kenya", fontSize = 18.sp)},
         navigationIcon = {
             IconButton(onClick = {
                 scope.launch {
@@ -78,7 +78,7 @@ fun TopBar(scope:CoroutineScope, scaffoldState: ScaffoldState){
                 Icon(Icons.Filled.Menu, "")
             }
         },
-        backgroundColor = colorResource(id = R.color.purple_200)
+        backgroundColor = colorResource(id = R.color.white)
     )
 
 }

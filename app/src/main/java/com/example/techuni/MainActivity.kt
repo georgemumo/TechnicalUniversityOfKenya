@@ -86,7 +86,12 @@ fun GreetingPreview() {
 fun Drawer(scope: CoroutineScope,scaffoldState: ScaffoldState,navController: NavController){
     val items = listOf(
         NavDrawerItem.Home,
-        NavDrawerItem.Music
+        NavDrawerItem.Music,
+        NavDrawerItem.News,
+        NavDrawerItem.Schools,
+        NavDrawerItem.StudentCouncil,
+        NavDrawerItem.hostels
+
     )
     Column (
         modifier = Modifier.background(colorResource(id = R.color.purple_200))

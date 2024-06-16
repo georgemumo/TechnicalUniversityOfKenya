@@ -48,11 +48,11 @@ fun HomeScreen(navController: NavController){
             }
         },
         topBar = { TopBar(scope = scope, scaffoldState = scaffoldState) },
-        drawerBackgroundColor = colorResource(id = R.color.purple_200),
+        drawerBackgroundColor = colorResource(id = R.color.black),
         drawerContent = {
             Drawer(scope = scope, scaffoldState = scaffoldState, navController = navController)
         },
-        backgroundColor = colorResource(id = R.color.purple_200)
+        backgroundColor = colorResource(id = R.color.white)
     ) { padding ->  // We need to pass scaffold's inner padding to content. That's why we use Box.
         Box(modifier = Modifier.padding(padding)) {
 

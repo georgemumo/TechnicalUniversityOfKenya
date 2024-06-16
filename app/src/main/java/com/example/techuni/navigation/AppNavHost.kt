@@ -11,12 +11,17 @@ import com.apk.george.ui.theme.screens.login.LoginScreen
 import com.apk.george.ui.theme.screens.registration.RegistrationScreen
 import com.example.techuni.navigation.navigation.NavDrawerItem
 import com.example.techuni.navigation.navigation.NavigationItem
+import com.example.techuni.ui.theme.screens.About.AboutTUKScreen
+import com.example.techuni.ui.theme.screens.News.NewsScreen
+import com.example.techuni.ui.theme.screens.hostels.HostelsScreen
+import com.example.techuni.ui.theme.screens.schools.SchoolsScreen
+import com.example.techuni.ui.theme.screens.studentCouncil.StudentCoucilScreen
 
 
 @Composable
 fun AppNavHost(modifier: Modifier = Modifier,
                navController: NavHostController = rememberNavController(),
-               startDestination: String= ROUTE_REGISTER){
+               startDestination: String= ROUTE_HOME){
     NavHost(navController = navController,
         modifier = modifier,
         startDestination = startDestination ){
@@ -28,6 +33,21 @@ fun AppNavHost(modifier: Modifier = Modifier,
 //        composable(NavigationItem.Action.route){ TopicList(topic = sampleTopics, navController) }
         composable(NavDrawerItem.Home.route){
             HomeScreen(navController)
+        }
+        composable(NavDrawerItem.News.route){
+            NewsScreen(navController)
+        }
+        composable(NavDrawerItem.Schools.route){
+            SchoolsScreen(navController)
+        }
+        composable(NavDrawerItem.hostels.route){
+            HostelsScreen(navController)
+        }
+        composable(NavDrawerItem.Music.route){
+            AboutTUKScreen(navController)
+        }
+        composable(NavDrawerItem.StudentCouncil.route){
+            StudentCoucilScreen(navController)
         }
         composable(ROUTE_LOGIN){ LoginScreen(navController) }
 //        composable(ROUTE_REASONS){ ReasonsScreen(navController) }
