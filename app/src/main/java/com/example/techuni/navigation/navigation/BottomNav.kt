@@ -16,13 +16,13 @@ import androidx.navigation.compose.rememberNavController
 fun BottomNavigationBar(navController: NavController){
     val items = listOf(
         NavigationItem.Home,
-        NavigationItem.Action,
+        NavigationItem.ADD,
         NavigationItem.Data,
 //        NavigationItem.Profile
     )
     BottomNavigation(
-        backgroundColor = Color.Black,
-        contentColor = Color.White
+        backgroundColor = Color.White,
+        contentColor = Color.Black
     ) {
         val navBackStackEntry by navController.currentBackStackEntryAsState()
         val currentRoute = navBackStackEntry?.destination?.route
@@ -31,8 +31,8 @@ fun BottomNavigationBar(navController: NavController){
 
                 icon = { Icon(item.icon, contentDescription = item.title) },
                 label = { Text(text = item.title) },
-                selectedContentColor = Color.White,
-                unselectedContentColor = Color.DarkGray.copy(0.4f),
+                selectedContentColor = Color.Black,
+                unselectedContentColor = Color.Black.copy(0.4f),
                 selected = currentRoute == item.route,
                 onClick = {
                     navController.navigate(item.route){

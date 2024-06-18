@@ -10,7 +10,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class NavigationItem(var route: String, var icon: ImageVector, var title: String){
     data object Home: NavigationItem("home", Icons.Filled.Home, "Home")
-    data object Action: NavigationItem("action", Icons.Filled.AddCircle, "")
+    data object ADD: NavigationItem("action", Icons.Filled.AddCircle, "ADD")
     data object Data: NavigationItem("data", Icons.Filled.Person, "You")
 //    data object Profile: NavigationItem("profile", Icons.Filled.Person, "Profile")
 }

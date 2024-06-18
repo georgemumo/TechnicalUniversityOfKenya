@@ -1,4 +1,4 @@
-package com.example.techuni.ui.theme
+package com.example.techuni.ui.theme.screens.splash.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -35,7 +35,6 @@ private val LightColorScheme = lightColorScheme(
 
 @Composable
 fun TechUniTheme(
-
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,
@@ -47,7 +46,7 @@ fun TechUniTheme(
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
 
-        darkTheme -> lightColorScheme()
+        darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }
 

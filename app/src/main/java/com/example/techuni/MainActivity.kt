@@ -90,8 +90,8 @@ fun Drawer(scope: CoroutineScope,scaffoldState: ScaffoldState,navController: Nav
         NavDrawerItem.News,
         NavDrawerItem.Schools,
         NavDrawerItem.StudentCouncil,
-        NavDrawerItem.hostels
-
+        NavDrawerItem.hostels,
+        NavDrawerItem.notices,
     )
     Column (
         modifier = Modifier.background(colorResource(id = R.color.purple_200))

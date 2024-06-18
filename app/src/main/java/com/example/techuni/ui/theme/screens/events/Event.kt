@@ -1,4 +1,8 @@
 package com.example.techuni.ui.theme.screens.events
 
-class Event {
-}
+data class Event (
+    val id: String = "",
+    val title: String = "",
+    val description: String = "",
+    val imageUrl: String = ""
+)
