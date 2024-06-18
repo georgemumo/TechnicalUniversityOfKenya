@@ -47,5 +47,5 @@ fun NoticesScreen(navController: NavController){
 //@Composable
 //fun EventItem(event: Int) {
 //    Text(text = event.tittle)
-//    // Display other event details as needed
+//    // Dlay other event details as needed
 //}
