@@ -19,8 +19,10 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.times
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
-import com.example.we_can.R
-import com.example.we_can.navigation.ROUTE_REGISTER
+import com.example.techuni.R
+import com.example.techuni.navigation.ROUTE_REGISTER
+//import com.example.we_can.R
+//import com.example.we_can.navigation.ROUTE_REGISTER
 import kotlinx.coroutines.delay
 
 @Composable
@@ -47,7 +49,7 @@ fun SplashScreen(navController: NavController) {
         contentAlignment = Alignment.Center
     ) {
         Image(
-            painter = painterResource(id = R.drawable.applogo),
+            painter = painterResource(id = R.drawable.splash),
             contentDescription = null,
             modifier = Modifier
                 .size(200.dp) // Adjust size as needed
