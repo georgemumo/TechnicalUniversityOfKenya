@@ -23,10 +23,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 
-import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
-import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
@@ -35,12 +33,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.text.font.FontFamily
 import androidx.navigation.NavController
-import com.example.techuni.navigation.ROUTE_ACCORDION_ITEM
 import com.example.techuni.navigation.ROUTE_NEWSABOUTTUK
 import com.example.we_can.screens.actions.News
 //import com.example.we_can.navigation.ROUTE_POST
-import com.example.we_can.screens.actions.Topic
-import okhttp3.Route
 
 @Composable
 fun NewsAccordionItem(news: News, navController: NavController,) {
@@ -112,6 +107,13 @@ fun NewsAccordionItem(news: News, navController: NavController,) {
                             style = MaterialTheme.typography.bodyMedium,
                             modifier = Modifier.padding(8.dp)
                         )
+                        TextButton(
+                            onClick = {
+                                navController.navigate(news.navigateToRoute)
+                            }
+                        ) {
+                            Text("Read more")
+                        }
                     }
 
                 }

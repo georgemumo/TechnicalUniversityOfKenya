@@ -101,21 +101,6 @@ fun PhotosTaken(navController: NavController){
                     .size(250.dp)
                     .width(400.dp))
 
-                Row(modifier = Modifier.horizontalScroll(rememberScrollState())) {
-                    Card(modifier = Modifier
-                        .height(130.dp)
-                        .width(200.dp)) {
-                        Image(painter = painterResource(id = R.drawable.news3 ), contentDescription = "")
-                    }
-
-                    Spacer(modifier = Modifier.width(5.dp))
-                    Card (modifier = Modifier
-                        .height(130.dp)
-                        .width(200.dp)){
-                        Image(painter = painterResource(id = R.drawable.news) , contentDescription ="" )
-                    }
-
-                }
 
                 Row(modifier = Modifier.horizontalScroll(rememberScrollState())) {
                     Card(modifier = Modifier

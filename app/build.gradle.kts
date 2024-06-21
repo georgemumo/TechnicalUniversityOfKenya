@@ -74,17 +74,47 @@ dependencies {
     implementation ("com.google.accompanist:accompanist-pager:0.20.3")
     implementation ("androidx.compose.runtime:runtime:1.2.0")
     implementation ("io.coil-kt:coil-compose:2.1.0")
+    implementation ("com.google.android.exoplayer:exoplayer-robolectricutils:2.19.1")
+//    implementation ("com.google.android.exoplayer:exoplayer-ui:2.15.1")
+//    implementation ("com.google.android.exoplayer:exoplayer-composable:0.2.0")
     implementation ("com.google.accompanist:accompanist-pager-indicators:0.20.3")
 
     implementation(libs.androidx.material3)
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    implementation(libs.firebase.firestore.ktx)
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
     implementation(libs.androidx.navigation.runtime.ktx)
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.firebase.auth)
+    dependencies {
+        implementation ("androidx.activity:activity-compose:1.4.0")
+        implementation ("androidx.compose.ui:ui:1.1.0")
+        implementation ("androidx.compose.foundation:foundation:1.1.0")
+        implementation ("androidx.compose.material:material:1.1.0")
+        implementation ("androidx.compose.runtime:runtime-livedata:1.1.0")
+        implementation ("androidx.compose.runtime:runtime:1.1.0")
+        implementation ("androidx.compose.ui:ui-tooling:1.1.0")
+        implementation ("androidx.viewpager2:viewpager2:1.0.0")
+
+        implementation ("androidx.compose.compiler:compiler:1.1.0")
+        implementation(libs.firebase.auth)
     implementation(libs.firebase.database.ktx)
+
     implementation(libs.androidx.appcompat)
     implementation(libs.firebase.database)
     implementation(libs.firebase.storage)
-    implementation(libs.androidx.runtime.livedata)
+        implementation ("io.coil-kt:coil-compose:1.4.0")
+
+        // ExoPlayer for video playbac
+
+        // Compose UI dependencies
+
+
+
+
+
+
+
+        implementation(libs.androidx.runtime.livedata)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -92,4 +122,5 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
 }

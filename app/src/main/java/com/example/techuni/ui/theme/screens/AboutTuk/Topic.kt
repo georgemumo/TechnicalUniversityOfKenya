@@ -1,6 +1,5 @@
 package com.example.we_can.screens.actions
 
-import androidx.annotation.DrawableRes
 import androidx.compose.ui.graphics.vector.ImageVector
 
 data class Topic(
@@ -9,5 +8,6 @@ data class Topic(
     val description: String,
     val tips: List<String>,
     val icons: List<ImageVector>,
-    val imageUrl :String,
+    val imageUrl: String,
+    val text: String
 )

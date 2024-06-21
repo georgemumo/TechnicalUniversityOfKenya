@@ -20,6 +20,7 @@ import coil.compose.rememberImagePainter
 import com.example.techuni.navigation.ROUTE_EVENTLISTSCREEN
 //import com.example.techuni.navigation.ROUTE_EVENTS
 import com.example.techuni.ui.theme.TechUniTheme
+import com.example.we_can.screens.actions.events.EventViewModel
 
 
 @Composable

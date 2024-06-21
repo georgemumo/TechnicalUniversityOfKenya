@@ -138,7 +138,7 @@ fun RegistrationScreen(navController: NavController){
             Button(
                 onClick = {
                     val authViewModel = AuthViewModel(navController, context)
-                    authViewModel.signUp(email.trim(), password.trim(), confirmPassword.trim(),name.trim())
+                    authViewModel.signUp(email.trim(), password.trim(), confirmPassword.trim(),name.trim(), )
                 },
                 modifier = Modifier
                     .fillMaxWidth()

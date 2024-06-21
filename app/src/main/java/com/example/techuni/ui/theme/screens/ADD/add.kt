@@ -40,8 +40,10 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.example.techuni.Drawer
 import com.example.techuni.R
-import com.example.techuni.navigation.ROUTE_NOTICES
+import com.example.techuni.navigation.ROUTE_ADDEVENTSCREEN
+//import com.example.techuni.navigation.ROUTE_NOTICES
 import com.example.techuni.navigation.ROUTE_REGISTER
+import com.example.techuni.navigation.ROUTE_SAVENOTICE
 import com.example.techuni.navigation.navigation.BottomNavigationBar
 import com.example.techuni.navigation.navigation.TopBar
 
@@ -89,14 +91,27 @@ fun AddScreen(navController: NavController){
                             modifier = Modifier.fillMaxWidth(),
                             verticalAlignment = Alignment.CenterVertically
                         ) {
-                           TextButton(onClick = {navController.navigate(ROUTE_NOTICES)  }) {
-                               Text(text = "Add Notices")
+                           TextButton(onClick = {navController.navigate(ROUTE_ADDEVENTSCREEN)  }) {
+                               Text(text = "Add Event")
                            }
                             Spacer(modifier = Modifier.width(180.dp))
-                            IconButton(onClick = {navController.navigate(ROUTE_NOTICES)}) {
+                            IconButton(onClick = {navController.navigate(ROUTE_ADDEVENTSCREEN)}) {
                                 Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = null)
                             }
                         }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            TextButton(onClick = {navController.navigate(ROUTE_SAVENOTICE)  }) {
+                                Text(text = "Add Notice")
+                            }
+                            Spacer(modifier = Modifier.width(180.dp))
+                            IconButton(onClick = {navController.navigate(ROUTE_SAVENOTICE)}) {
+                                Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = null)
+                            }
+                        }
+
 
                     }
 

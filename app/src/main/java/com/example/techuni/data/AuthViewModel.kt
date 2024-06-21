@@ -76,7 +76,7 @@ class AuthViewModel(private val navController: NavController, private val contex
         regRef.setValue(userData)
             .addOnCompleteListener { task ->
                 if (task.isSuccessful) {
-                    showToast("Registered successfully")
+                    showToast("$email Registered successfully")
                     navController.navigate(ROUTE_HOME)
                 } else {
                     handleAuthError(task.exception?.message ?: "Unknown error")

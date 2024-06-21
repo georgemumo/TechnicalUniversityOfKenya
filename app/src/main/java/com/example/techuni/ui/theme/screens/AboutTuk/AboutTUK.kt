@@ -1,9 +1,11 @@
 package com.example.techuni.ui.theme.screens.AboutTuk
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.DrawerValue
@@ -17,6 +19,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
@@ -44,21 +47,29 @@ fun AboutTUK(topic: List<Topic>, navController: NavController) {
         },
         backgroundColor = colorResource(id = R.color.white)
     ) {
-        Column (
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(paddingValues = it)
-                .verticalScroll(rememberScrollState())
-        ){
-            Box(
-                modifier = Modifier.padding(16.dp).padding(top = 36.dp).align(Alignment.CenterHorizontally)
-            ) {
-                Text(text = "About Technical University Of Kenya", color = Color.Black, style = TextStyle(textDecoration = TextDecoration.Underline), fontSize = 23.sp)
-            }
-            topic.forEach { topic ->
-                AccordionItem(topic = topic, navController)
+        Box {
+            Image(painter = painterResource(id = R.drawable.back), contentDescription = "",Modifier.size(800.dp))
+            Column (
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues = it)
+                    .verticalScroll(rememberScrollState())
+            ){
+                Box(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .padding(top = 36.dp)
+                        .align(Alignment.CenterHorizontally)
+                ) {
+                    Text(text = "About Technical University Of Kenya", color = Color.Black, style = TextStyle(textDecoration = TextDecoration.Underline), fontSize = 23.sp)
+                }
+                topic.forEach { topic ->
+                    AccordionItem(topic = topic, navController)
+                }
             }
         }
+
+
     }
 }
 //

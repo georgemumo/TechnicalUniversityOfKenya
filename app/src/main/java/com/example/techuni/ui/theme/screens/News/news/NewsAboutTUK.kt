@@ -1,9 +1,12 @@
 package com.example.techuni.ui.theme.screens.AboutTuk
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.DrawerValue
@@ -17,11 +20,14 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextDecoration
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import com.example.techuni.Drawer
 import com.example.techuni.R
 import com.example.techuni.navigation.navigation.BottomNavigationBar
@@ -31,7 +37,7 @@ import com.example.we_can.screens.actions.News
 //import com.example.we_can.navigation.BottomNavigationBar
 
 @Composable
-fun NewsAboutTUK(topic: List<News>, navController: NavController) {
+fun NewsAboutTUK(news: List<News>, navController: NavController) {
     val scope = rememberCoroutineScope()
 
     val scaffoldState = rememberScaffoldState(rememberDrawerState(DrawerValue.Closed))
@@ -44,26 +50,36 @@ fun NewsAboutTUK(topic: List<News>, navController: NavController) {
         },
         backgroundColor = colorResource(id = R.color.white)
     ) {
-        Column (
-            modifier = Modifier
-                .fillMaxSize()
-                .padding(paddingValues = it)
-                .verticalScroll(rememberScrollState())
-        ){
-            Box(
-                modifier = Modifier.padding(16.dp).padding(top = 36.dp).align(Alignment.CenterHorizontally)
-            ) {
-                Text(text = "About Technical University Of Kenya", color = Color.Black, style = TextStyle(textDecoration = TextDecoration.Underline), fontSize = 23.sp)
+        Box (modifier = Modifier
+            .fillMaxSize()
+            .fillMaxWidth()){
+            Image(painter = painterResource(id = R.drawable.back), contentDescription = "",Modifier.size(800.dp))
+            Column (
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(paddingValues = it)
+                    .verticalScroll(rememberScrollState())
+            ){
+                Box(
+                    modifier = Modifier
+                        .padding(16.dp)
+                        .padding(top = 36.dp)
+                        .align(Alignment.CenterHorizontally)
+                ) {
+                    Text(text = "TECHNICAL UNIVERSITY OF KENYA NEWS", color = Color.Black, style = TextStyle(textDecoration = TextDecoration.Underline), fontSize = 23.sp)
+                }
+                news.forEach { news ->
+                    NewsAccordionItem(news = news, navController)
+                }
             }
-            topic.forEach { topic ->
-                NewsAccordionItem(topic = topic, navController)
-            }
+
         }
+
     }
 }
-//
-//@Preview
-//@Composable
-//fun TopicListPreview() {
-//    TopicList(sampleTopics, rememberNavController())
-//}
+
+@Preview
+@Composable
+fun TopicListPreview() {
+    NewsAboutTUK(sampleNews, rememberNavController())
+}

@@ -37,6 +37,7 @@ import com.example.techuni.R
 import com.example.techuni.navigation.navigation.BottomNavigationBar
 import com.example.techuni.navigation.navigation.TopBar
 import androidx.compose.material.Scaffold
+import androidx.compose.material.icons.filled.Call
 import androidx.compose.material3.Card
 import androidx.compose.material3.TextButton
 import androidx.compose.ui.Alignment
@@ -53,10 +54,12 @@ import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.techuni.navigation.ROUTE_ABOUTSCREEN
+import com.example.techuni.navigation.ROUTE_ACCORDION_ITEM
 import com.example.techuni.navigation.ROUTE_HOME
 import com.example.techuni.navigation.ROUTE_MUTUAS
 import com.example.techuni.navigation.ROUTE_REGISTER
-import com.example.techuni.navigation.ROUTE_STUDENTCOUNCIL
+//import com.example.techuni.navigation.ROUTE_STUDENTCOUNCIL
+import com.example.techuni.navigation.ROUTE_UNIVERSITYCOUNCIL
 
 //import com.example.we_can.navigation.ROUTE_POST
 
@@ -72,7 +75,7 @@ fun HomeScreen(navController: NavController){
         },
         floatingActionButton = {
             FloatingActionButton(onClick = { navController.navigate(ROUTE_REGISTER) }) {
-                Icon(imageVector = Icons.Filled.Create, contentDescription = null)
+                Icon(imageVector = Icons.Filled.Call, contentDescription = null)
             }
         },
         topBar = { TopBar(scope = scope, scaffoldState = scaffoldState) },
@@ -166,7 +169,7 @@ fun HomeScreen(navController: NavController){
                         modifier = Modifier.fillMaxWidth(),
 
                     )
-                    TextButton(onClick = {navController.navigate(ROUTE_ABOUTSCREEN) }) {
+                    TextButton(onClick = {navController.navigate(ROUTE_ACCORDION_ITEM) }) {
                         Text(text = "Read more about TU-K", fontSize = 15.sp,
                             style = TextStyle(
                                 textDecoration = TextDecoration.Underline,
@@ -208,7 +211,7 @@ fun HomeScreen(navController: NavController){
 
 
                         )
-                    TextButton(onClick = {navController.navigate(ROUTE_STUDENTCOUNCIL) }) {
+                    TextButton(onClick = {navController.navigate(ROUTE_UNIVERSITYCOUNCIL) }) {
                         Text(text = " >> University Council",
                             fontSize = 15.sp,
                             style = TextStyle(

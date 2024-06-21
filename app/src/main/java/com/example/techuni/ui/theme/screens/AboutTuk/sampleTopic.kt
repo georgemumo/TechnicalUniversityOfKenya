@@ -29,7 +29,7 @@ val sampleTopics = listOf(
         imageUrl =
         R.drawable.alumni.toString()
         ,
-
+        text = "Kenya Polytechnic Cadet Engineers, class of 1963 (Courtesy of Amu Gather, TU-K Alumni)",
         icons = listOf(
             Icons.Filled.Add,
             Icons.Filled.CheckCircle,
@@ -44,7 +44,7 @@ val sampleTopics = listOf(
         tips = listOf(
 
         ),
-
+        text = "Members of council",
         imageUrl =
         R.drawable.councilpic.toString()
         ,
@@ -92,7 +92,7 @@ val sampleTopics = listOf(
                     "TU-K can be safely considered a moderately large university if one takes into account the huge number of students and the large staff portfolio. Further, the institution has massive investments in terms of resources for learning and general infrastructure. These are factors that call for a well organised security system."
         ),
         imageUrl = R.drawable.profmutua.toString(),
-
+        text = "",
         icons = listOf(
             Icons.Filled.CheckCircle,
             Icons.Filled.Add,
@@ -103,7 +103,7 @@ val sampleTopics = listOf(
     Topic(
         title = "University Board",
         imageRes = R.drawable.universityboard,
-
+        text = "The Senate",
         description = "The Senate is the supreme academic organ of the institution. The Senate is responsible for ensuring that appropriate and high academic standards are maintained by the institution. TUK is expected to have all its new academic programmes given the final approval by Senate. The Senate is also expected to approve examination results for the degree programmes and any postgraduate qualifications. " +
                 "For all the programmes approved by Senate, the Senate shall also approve the admission requirements and the standards to be attained by the candidates in the respective examinations in order to qualify with the degree or award. The degrees and postgraduate qualifications awarded by TUK shall be as approved by Senate.",
         tips = listOf(
@@ -140,7 +140,7 @@ val sampleTopics = listOf(
             "Student Welfare and Support Services\n" +
                     "The student affairs and services function concerns itself with the following activities: student social welfare, student accommodation services, catering services, sports and recreation, student career development, and the chaplaincy"
         ),
-
+        text = "",
         imageUrl = null.toString(),
         icons = listOf(
             Icons.Filled.CheckCircle,
@@ -246,7 +246,7 @@ val sampleTopics = listOf(
 
 
         ),
-
+        text = "",
         imageUrl = null.toString(),
         icons = listOf(
             Icons.Filled.CheckCircle,

@@ -3,6 +3,7 @@ package com.example.techuni.ui.theme.screens.events
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
@@ -24,6 +25,7 @@ import com.example.techuni.R
 import com.example.techuni.navigation.ROUTE_REGISTER
 import com.example.techuni.navigation.navigation.BottomNavigationBar
 import com.example.techuni.navigation.navigation.TopBar
+import com.example.we_can.screens.actions.events.EventViewModel
 
 @Composable
 fun EventListScreen(navController: NavController, eventViewModel: EventViewModel = viewModel()) {

@@ -1,4 +1,4 @@
-package com.example.techuni.ui.theme.screens.News
+package com.example.techuni.ui.theme.screens.notices
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
@@ -16,6 +16,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.rememberDrawerState
 import androidx.compose.material.rememberScaffoldState
+import androidx.compose.material3.Button
 import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.Icon
 import androidx.compose.material3.TextButton
@@ -35,7 +36,9 @@ import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.techuni.Drawer
 import com.example.techuni.R
+import com.example.techuni.navigation.ROUTE_CONFRENCESCREEN
 import com.example.techuni.navigation.ROUTE_REGISTER
+import com.example.techuni.navigation.ROUTE_SAVENOTICE
 import com.example.techuni.navigation.navigation.BottomNavigationBar
 import com.example.techuni.navigation.navigation.TopBar
 
@@ -92,8 +95,11 @@ fun NoticesScreen(navController: NavController){
                 Image(painter = painterResource(id = R.drawable.link2), contentDescription ="" )
                 Text(text = "The Technical University of Kenya in partnership " +
                         "with Exploring Visual Cultures will be hosting the 4th International Conference from November 27th to 29th, 2024 at the Edge Convention Centre, Nairobi. The theme of the conference is AI Media Innovations, Applications, Visual Culture, Challenges, and Future Trends. The call for papers is out and the deadline for submission of abstracts is on 31st May, 2024")
-                TextButton(onClick = { /*TODO*/ }) {
-                    Text(text = "More on the conference")
+                TextButton(onClick = { navController.navigate(ROUTE_CONFRENCESCREEN)}) {
+                    Text(text = "More on the conference", color = Color.Red, style = TextStyle(textDecoration = TextDecoration.Underline))
+                }
+                Button(onClick = { navController.navigate(ROUTE_SAVENOTICE)}) {
+                    Text(text = "ADD NOTICE", color = Color.Red, style = TextStyle(textDecoration = TextDecoration.Underline), modifier = Modifier.fillMaxWidth())
                 }
             }
         }
