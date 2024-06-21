@@ -1,11 +1,9 @@
 package com.example.techuni.ui.theme.screens.events
-import EventViewModel
 import android.net.Uri
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
-import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.Button
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Text
@@ -19,7 +17,8 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import coil.compose.rememberImagePainter
-import com.example.techuni.navigation.ROUTE_EVENTS
+import com.example.techuni.navigation.ROUTE_EVENTLISTSCREEN
+//import com.example.techuni.navigation.ROUTE_EVENTS
 import com.example.techuni.ui.theme.TechUniTheme
 
 
@@ -73,7 +72,7 @@ fun EventScreen(navController: NavController,eventViewModel: EventViewModel = vi
                     eventViewModel.saveEvent(title, description, imageUri!!,
 
                     )
-                    navController.navigate(ROUTE_EVENTS)
+                    navController.navigate(ROUTE_EVENTLISTSCREEN)
                 }
             }
         ) {

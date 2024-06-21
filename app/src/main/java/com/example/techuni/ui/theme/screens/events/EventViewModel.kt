@@ -1,3 +1,5 @@
+package com.example.we_can.screens.actions.events
+
 import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
@@ -60,4 +62,20 @@ class EventViewModel : ViewModel() {
             }
         }
     }
+    fun updateEvent(event: Event) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                databaseReference.child(event.id).setValue(event)
+            }
+        }
+    }
+
+    fun deleteEvent(eventId: String) {
+        viewModelScope.launch {
+            withContext(Dispatchers.IO) {
+                databaseReference.child(eventId).removeValue()
+            }
+        }
+    }
+
 }
