@@ -41,6 +41,7 @@ import androidx.navigation.NavController
 import com.example.techuni.Drawer
 import com.example.techuni.R
 import com.example.techuni.navigation.ROUTE_ADDEVENTSCREEN
+import com.example.techuni.navigation.ROUTE_ADDSTUDENTSCREEN
 //import com.example.techuni.navigation.ROUTE_NOTICES
 import com.example.techuni.navigation.ROUTE_REGISTER
 import com.example.techuni.navigation.ROUTE_SAVENOTICE
@@ -96,6 +97,18 @@ fun AddScreen(navController: NavController){
                            }
                             Spacer(modifier = Modifier.width(180.dp))
                             IconButton(onClick = {navController.navigate(ROUTE_ADDEVENTSCREEN)}) {
+                                Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = null)
+                            }
+                        }
+                        Row(
+                            modifier = Modifier.fillMaxWidth(),
+                            verticalAlignment = Alignment.CenterVertically
+                        ) {
+                            TextButton(onClick = {navController.navigate(ROUTE_ADDSTUDENTSCREEN)  }) {
+                                Text(text = "Add Student Perfomance")
+                            }
+                            Spacer(modifier = Modifier.width(180.dp))
+                            IconButton(onClick = {navController.navigate(ROUTE_ADDSTUDENTSCREEN)}) {
                                 Icon(imageVector = Icons.Filled.ArrowForward, contentDescription = null)
                             }
                         }

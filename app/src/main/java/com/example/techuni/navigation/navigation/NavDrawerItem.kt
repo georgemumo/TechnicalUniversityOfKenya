@@ -4,6 +4,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Add
 import androidx.compose.material.icons.filled.AddCircle
 import androidx.compose.material.icons.filled.ArrowBack
+import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material.icons.filled.Person
@@ -11,6 +12,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 
 open class NavDrawerItem(var route: String, var icon: ImageVector, var title: String) {
      object Home : NavDrawerItem("home", Icons.Filled.Home, "Home")
+     object Support : NavDrawerItem("support",Icons.Filled.Check,"Student Support")
      object Music : NavDrawerItem("aboutTUK", Icons.Filled.Lock, "About TUK")
      object News :NavDrawerItem("news",Icons.Filled.Add,"News")
      object Perfomance:NavDrawerItem("perfomance",Icons.Filled.ArrowBack,"PERFOMANCE")

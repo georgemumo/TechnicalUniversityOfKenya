@@ -58,14 +58,14 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    MainScreen()
+                    MainScreen4()
                 }
             }
         }
     }
 }
 @Composable
-fun MainScreen(){
+fun MainScreen4(){
     val scope = rememberCoroutineScope()
     val scaffoldState = rememberScaffoldState(rememberDrawerState(androidx.compose.material.DrawerValue.Closed))
     val navController = rememberNavController()
@@ -78,7 +78,7 @@ fun MainScreen(){
 @Composable
 fun GreetingPreview() {
     TechUniTheme {
-        MainScreen()
+        MainScreen4()
 
     }
     }
@@ -93,6 +93,7 @@ fun Drawer(scope: CoroutineScope,scaffoldState: ScaffoldState,navController: Nav
         NavDrawerItem.hostels,
         NavDrawerItem.notices,
         NavDrawerItem.Perfomance,
+        NavDrawerItem.Support
     )
     Column (
         modifier = Modifier.background(colorResource(id = R.color.purple_200))

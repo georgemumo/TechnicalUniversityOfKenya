@@ -72,9 +72,3 @@ fun AboutTUK(topic: List<Topic>, navController: NavController) {
 
     }
 }
-//
-//@Preview
-//@Composable
-//fun TopicListPreview() {
-//    TopicList(sampleTopics, rememberNavController())
-//}

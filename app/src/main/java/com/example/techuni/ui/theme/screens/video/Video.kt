@@ -5,6 +5,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material.DrawerValue
 import androidx.compose.material.Scaffold
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Call
 import androidx.compose.material.icons.filled.Create
 import androidx.compose.material.rememberDrawerState
 import androidx.compose.material.rememberScaffoldState
@@ -33,7 +34,7 @@ fun VideoScreen(navController: NavController){
         },
         floatingActionButton = {
             FloatingActionButton(onClick = { navController.navigate(ROUTE_REGISTER) }) {
-                Icon(imageVector = Icons.Filled.Create, contentDescription = null)
+                Icon(imageVector = Icons.Filled.Call, contentDescription = null)
             }
         },
         topBar = { TopBar(scope = scope, scaffoldState = scaffoldState) },
